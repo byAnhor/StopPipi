@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">StopPipi</string>
+    <string name="pluie">Pluie</string>
+    <string name="nuage">Nuage</string>
+    <string name="soleil">Soleil</string>
+</resources>
