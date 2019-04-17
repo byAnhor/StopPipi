@@ -1,4 +1,4 @@
-package com.example.stoppipi;
+package com.byanhor.stoppipi;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -11,11 +11,24 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import devs.mulham.horizontalcalendar.HorizontalCalendar;
 import devs.mulham.horizontalcalendar.model.CalendarEvent;
@@ -111,6 +124,8 @@ public class WakeUpActivity extends AppCompatActivity {
         TextView textViewDateFR = findViewById(R.id.textViewDateFR);
         selectedDateSimpleDateFormatFR = selectedDateSimpleDateFormatFR.substring(0,1).toUpperCase() + selectedDateSimpleDateFormatFR.substring(1);
         textViewDateFR.setText(selectedDateSimpleDateFormatFR);
+        AsynchReadWriteURL mTask = new AsynchReadWriteURL(this, findViewById(android.R.id.content), selectedDateSimpleDateFormatFR);
+        mTask.execute("abc","10","Hello world");
     }
 }
 

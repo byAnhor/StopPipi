@@ -1,4 +1,4 @@
-package com.example.stoppipi;
+package com.byanhor.stoppipi;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
